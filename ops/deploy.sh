@@ -7,8 +7,8 @@ set -euo pipefail
 : "${REPO_NAME:=mini-cicd}"           # 仓库名，便于通用
 
 # 1) 拉镜像
-echo "[pull] $REGISTRY/$OWNER/$REPO_NAME-web:$SHA_TAG"
-docker pull "$REGISTRY/$OWNER/$REPO_NAME-web:$SHA_TAG"
+echo "[pull] $REGISTRY/$OWNER/$REPO_NAME:$SHA_TAG"
+docker pull "$REGISTRY/$OWNER/$REPO_NAME:$SHA_TAG"
 
 # 2) 用 commit SHA 渲染 index.html（仅演示：显示当前版本）
 #    做法：从镜像里复制出 index.html，替换后再覆盖回容器的方式
