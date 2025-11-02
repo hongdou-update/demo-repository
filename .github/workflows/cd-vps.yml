@@ -36,8 +36,8 @@ jobs:
           context: ./web
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.REPO_NAME }}:latest
-            ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.REPO_NAME }}:${{ steps.vars.outputs.SHA_TAG }}
+            ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.REPO_NAME}}:latest
+            ghcr.io/${{ github.repository_owner }}/${{ steps.vars.outputs.REPO_NAME}}:${{ steps.vars.outputs.SHA_TAG }}
 
   deploy_to_vps:
     runs-on: ubuntu-latest
